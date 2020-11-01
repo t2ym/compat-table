@@ -1057,6 +1057,7 @@ class TargetConfig extends Injectable(Traceable(Configurable(GulpDefaultRegistry
         // phases in the order of their processing
         clean: [
           'clean-root',
+          'patch-index-html',
         ],
         backend: [
           //'integrity-service-helpers',
@@ -1386,6 +1387,7 @@ class TargetConfig extends Injectable(Traceable(Configurable(GulpDefaultRegistry
         ? `rm -rf ${path.resolve(this.path.base, this.path.root)} && cp -rv ${path.resolve(this.path.base, this.path.raw)} ${path.resolve(this.path.base, this.path.root)}`
         : `echo do nothing as this.path.raw is not specified`,
       "dummy-integrity-json": `touch ${path.resolve(this.path.base, this.path.root, 'integrity.json')}`,
+      "patch-index-html": `cp -vf ${path.resolve(this.path.base, this.path.config, 'index.html')} ${path.resolve(this.path.base, this.path.root, 'index.html')}`,
     })
     .assign('@thin-hook/examples')({ // scoped plugins
       base: path.resolve(this.path.hook, 'examples'),
