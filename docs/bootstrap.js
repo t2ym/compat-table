@@ -211,6 +211,7 @@ else {
   ];
   hook.parameters.noHook = [
     'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+    'https://www.google-analytics.com/ga.js',
     url => location.origin === url.origin &&
       [
         '/master.js',
