@@ -1,4 +1,4 @@
-# Hooked ECMAScript compatibility tables
+# Hooked [ECMAScript compatibility tables](http://kangax.github.io/compat-table/es6/)
 
 # Build
 
