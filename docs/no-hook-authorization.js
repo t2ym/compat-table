@@ -14,13 +14,13 @@ else {
     // JSONs are output to console in the learning mode
     //'*': true,
     "4f0395d52a8c1c7edaacacade9c31fe18555b79ce963dfb1abaaa34990993374": true, // docs/about-blank-redirector.js
-    "36ed1fbfefb02333badcc2f248e03c8ef9de82850502f0d739e129eb9f193e22": true, // docs/bootstrap.js
+    "d4531f9a1f41d8d9c09a3d4f36839a6ca982d2c86c070eb27769b3fc70fa71f6": true, // docs/bootstrap.js
     "0242016e2887b322ab28b887f03779c63899db232bb036d794a0278db9e54339": true, // docs/content-loader.js
     "dcdf563b6c39c881cd4a619a7fbf9e577f12947839d5082a8acfd3caf93f27fa": true, // docs/hook-callback.js
-    "450d36f6c418ce94deff2adf0fcf51dbacd886bb6bd7d54ff113d1228d44b9a7": true, // docs/hook-worker.js
+    "413ac9659bb64ab05a5955315217ba0d62e2a72332a4a257af1d05e3f5ea7cd5": true, // docs/hook-worker.js
     "6249373b8a4e3bb915788ea4f77e8b892f5bb77407e4fe5d981ebd118876be20": true, // docs/mark-parsed.js
-    "1c3a37a91c7c3252c7d64035f2436d9925d2a97394982f5990abad601991fd0d": true, // docs/node_modules/thin-hook/hook.min.js
     "ba07654d1c24a271ba0fa7ee5c55cd60c02133b0e53cb6bb6e634da473b1e540": true, // docs/script-hashes.js
+    "1c3a37a91c7c3252c7d64035f2436d9925d2a97394982f5990abad601991fd0d": true, // docs/thin-hook/hook.min.js
     "c46af0c64c274fa3ce4859243777218fc83c7f57f8176e8e35ab815b8eecb19c": true, // docs/wrap-globals.js
   };
   let hidden;

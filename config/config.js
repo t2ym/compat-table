@@ -396,7 +396,7 @@ class TargetConfig extends Injectable(Traceable(Configurable(GulpDefaultRegistry
           searchParams: [ 'no-hook' ],
         },
       },
-      dest: path.resolve(this.path.base, this.path.root, this.path.components, 'thin-hook', 'hook.min.js'),
+      dest: path.resolve(this.path.base, this.path.root, /*this.path.components, */ 'thin-hook', 'hook.min.js'),
     })
     .assign('no-hook-authorization')({
       hash: {
