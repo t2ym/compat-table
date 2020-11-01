@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "compat-table/": "/",
+    "compat-table": "/node.js",
+    "module-name": "/modules/module-name/index.js",
+    "module-name/": "/modules/module-name/",
+    "module-name2": "/modules/module-name2/index.js",
+    "foo": "/bar.js",
+    "module-on-cdn": "https://cdn.domain.com/path/cdn-module/index.js"
+  },
+  "scopes": {}
+}
