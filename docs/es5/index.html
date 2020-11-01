@@ -7226,7 +7226,7 @@ for (var i in Function) {
 }
 delete Object.prototype.length;
 return result;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");try{return Function("asyncTestPassed","\nvar result = true;\nObject.prototype.length = 42;\nfor (var i in Function) {\n    if (i === 'length') {\n        result = false;\n    }\n}\ndelete Object.prototype.length;\nreturn result;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("54");return Function("asyncTestPassed","'use strict';"+"\nvar result = true;\nObject.prototype.length = 42;\nfor (var i in Function) {\n    if (i === 'length') {\n        result = false;\n    }\n}\ndelete Object.prototype.length;\nreturn result;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");try{return Function("asyncTestPassed","\nvar result = false;\n/*Object.prototype.length = 42;*/\nfor (var i in Function) {\n    if (i === 'length') {\n        result = false;\n    }\n}\n/*delete Object.prototype.length;*/\nreturn result;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("54");return Function("asyncTestPassed","'use strict';"+"\nvar result = true;\nObject.prototype.length = 42;\nfor (var i in Function) {\n    if (i === 'length') {\n        result = false;\n    }\n}\ndelete Object.prototype.length;\nreturn result;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="es5shim">?</td>
 <td class="unknown obsolete" data-browser="konq4_13">?</td>
