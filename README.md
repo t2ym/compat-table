@@ -1,4 +1,4 @@
-# Hooked ES Compatibility Table
+# Hooked ECMAScript compatibility tables
 
 # Build
 
@@ -10,7 +10,7 @@ npm ci
 gulp
 ```
 
-# Run
+# Serve
 
 ```sh
 gulp https # Serve at https://localhost:8080/
