@@ -1,5 +1,7 @@
 # Hooked [ECMAScript compatibility tables](http://kangax.github.io/compat-table/es6/)
 
+Served on GitHub Pages at [https://t2ym.github.io/compat-table/](https://t2ym.github.io/compat-table/)
+
 # Build
 
 ```sh
