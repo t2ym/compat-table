@@ -14,9 +14,9 @@ else {
     // JSONs are output to console in the learning mode
     //'*': true,
     "4f0395d52a8c1c7edaacacade9c31fe18555b79ce963dfb1abaaa34990993374": true, // docs/about-blank-redirector.js
-    "93cfbaa2828409fb647442033271d1676e3e07f1d7fcf549d601209e25e0bdac": true, // docs/bootstrap.js
+    "80d0cf962da6fd3d6290e9202ea5922795aab193da86efe9f2d3e08c32959718": true, // docs/bootstrap.js
     "0242016e2887b322ab28b887f03779c63899db232bb036d794a0278db9e54339": true, // docs/content-loader.js
-    "753e5bf6bc535f5a45733b13c4fbde021669f137075854af9684c63efacded60": true, // docs/hook-callback.js
+    "5a17e1974f801cccf8a23e7bfb93f92ee70291a20812da70cb2cb03daf26b77b": true, // docs/hook-callback.js
     "93e6b289da83905870d9ac25be0a0a0bb7e12d484c1a0fe56f0a4296a2140b11": true, // docs/hook-worker.js
     "1c3a37a91c7c3252c7d64035f2436d9925d2a97394982f5990abad601991fd0d": true, // docs/hook.min.js
     "6249373b8a4e3bb915788ea4f77e8b892f5bb77407e4fe5d981ebd118876be20": true, // docs/mark-parsed.js

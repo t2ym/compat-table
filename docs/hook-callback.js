@@ -6090,6 +6090,15 @@ else {
     __system_global_test__: {
       [S_DEFAULT]: 'rwxRW',
     },
+    __updateSupertest: {
+      [S_DEFAULT]: 'rwxRW',
+    },
+    __updateHeaderTotal: {
+      [S_DEFAULT]: 'rwxRW',
+    },
+    onhashchange: {
+      [S_DEFAULT]: 'rwxRW',
+    },
     simdFloatTypes: {
       [S_DEFAULT]: 'rwxRW',
     },

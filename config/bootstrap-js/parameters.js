@@ -12,6 +12,6 @@ hook.parameters.noHook = [
   'https://www.google-analytics.com/ga.js',
   url => location.origin === url.origin &&
     [
-      '/master.js',
+      //'/master.js',
     ].filter(path => url.pathname.endsWith(path)).length > 0
 ];
