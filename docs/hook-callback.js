@@ -3003,6 +3003,8 @@ else {
     "./modules/module2.js": "@module2",
     "./modules/module2.js,*": "@module2",
     'https://thin-hook.localhost.localdomain/automation.json,*': '@cache_automation',
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js": '@jquery',
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js,*": '@jquery',
   },
   acl: {
     // blacklist objects/classes
@@ -4853,6 +4855,10 @@ else {
         [S_DEFAULT]: 'r-x',
         '@web_animations_next_lite': 'rwxRW',
       },
+      '@jquery': Policy.patternAcl({
+        w: (name, prop) => name === 'document' && typeof prop === 'string' && prop.startsWith('jQuery') && 
+          (acl[name][prop] = acl[name][prop] || { [S_DEFAULT]: 'rwxRW' }) // generate acl on demand
+      }),
       createElement: {
         [S_DEFAULT]: function createElementAcl(normalizedThisArg,
                                                normalizedArgs /* ['property', args], ['property', value], etc. */,
@@ -6646,6 +6652,10 @@ else {
       }),
       '@firebase_database_callback_global_variable_writer': Policy.patternAcl({ w: (name, prop) => name === 'window' && typeof prop === 'string' && (prop.startsWith('pLPCommand') || prop.startsWith('pRTLPCB')) }),
       '@firebase_auth_iframecb_writer': Policy.patternAcl({ w: (name, prop) => name === 'window' && typeof prop === 'string' && prop.startsWith('__iframefcb') }),
+      '@jquery': Policy.patternAcl({
+        w: (name, prop) => name === 'window' && typeof prop === 'string' && prop.startsWith('jQuery') && 
+          (acl[prop] = acl[prop] || { [S_DEFAULT]: 'rwxRW' }) // generate acl on demand
+      }),
       [S_PROTOTYPE]: {
         [S_OBJECT]: 'r--',
         [S_DEFAULT]: Policy.globalAcl(), // TODO: Use S_INSTANCE policy
