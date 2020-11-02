@@ -16,7 +16,7 @@ else {
     "4f0395d52a8c1c7edaacacade9c31fe18555b79ce963dfb1abaaa34990993374": true, // docs/about-blank-redirector.js
     "bec2d7a84a12a116b9bdf03db4bd312dff1b93cdaf0ffbcfd9d7870ca9deb961": true, // docs/bootstrap.js
     "0242016e2887b322ab28b887f03779c63899db232bb036d794a0278db9e54339": true, // docs/content-loader.js
-    "26727674c90be6673ec211ee0acbea899c24d028484310addc478bb7295dd6b7": true, // docs/hook-callback.js
+    "0baf1d422a5a85c50e250d485e20ab0bedb8130b842981e703757ca5973ae386": true, // docs/hook-callback.js
     "93e6b289da83905870d9ac25be0a0a0bb7e12d484c1a0fe56f0a4296a2140b11": true, // docs/hook-worker.js
     "1c3a37a91c7c3252c7d64035f2436d9925d2a97394982f5990abad601991fd0d": true, // docs/hook.min.js
     "6249373b8a4e3bb915788ea4f77e8b892f5bb77407e4fe5d981ebd118876be20": true, // docs/mark-parsed.js

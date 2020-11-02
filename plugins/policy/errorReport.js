@@ -13,7 +13,7 @@ Copyright (c) 2017, 2018, 2019, 2020 Tetsuya Mori <t2y3141592@gmail.com>. All ri
   // Object.defineProperty(_global, 'caches', { configurable: false, enumerable: false, writable: false, value: null });
   // Object.defineProperty(_global, 'CacheStorage', { configurable: false, enumerable: false, writable: false, value: null });
   const onThrowAsync = async function onThrowAsync(error, hookArgs, contextStack, aclArgs) {
-    if (!hookCallbackCompatibilityTestDone || !error.message.match(/^Permission Denied:/) || !Array.isArray(aclArgs)) {
+    if (!hookCallbackCompatibilityTestDone || !(error.message && error.message.match(/^Permission Denied:/)) || !Array.isArray(aclArgs)) {
       return true; // Skipping non-ACL errors for the demo. They can be reported to the server, of course.
     }
     // Report the error to the server
