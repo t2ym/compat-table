@@ -9,8 +9,9 @@ hook.parameters.cors = [
 ];
 hook.parameters.noHook = [
   'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+  'https://www.google-analytics.com/ga.js',
   url => location.origin === url.origin &&
     [
       '/master.js',
-    ].filter(path => url.pathname.startsWith(path)).length > 0
+    ].filter(path => url.pathname.endsWith(path)).length > 0
 ];

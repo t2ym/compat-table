@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const shell = require('gulp-shell');
 const stringify = require('json-stringify-safe');
 
-const targetConfig = require('./config/config.js');
+const targetConfig = require(process.argv.indexOf('--github-pages') < 0 ? './config/config.js' : './config/github-pages-config.js');
 gulp.registry(targetConfig); // targetConfig as custom gulp registry
 console.log('targetConfig', stringify(targetConfig, null, 2));
 
