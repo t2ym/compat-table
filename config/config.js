@@ -301,7 +301,7 @@ class TargetConfig extends Injectable(Traceable(Configurable(GulpDefaultRegistry
         },
       },
       searchParams: {
-        'version': 4,
+        'version': 5,
         'xno-hook-authorization': (plugin, targetType, targetConfig) => {
           // plugin === null : returns the list of dependent plugins for targetType
           // plugin !== null : returns the parameter value for targetType
