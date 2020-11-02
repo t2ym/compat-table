@@ -215,6 +215,6 @@ else {
     url => location.origin === url.origin &&
       [
         '/master.js',
-      ].filter(path => url.pathname.startsWith(path)).length > 0
+      ].filter(path => url.pathname.endsWith(path)).length > 0
   ];
 }

@@ -14,7 +14,7 @@ else {
     // JSONs are output to console in the learning mode
     //'*': true,
     "4f0395d52a8c1c7edaacacade9c31fe18555b79ce963dfb1abaaa34990993374": true, // docs/about-blank-redirector.js
-    "a86e5882cc595feb90dc378d7ec2fad74a580b1b06c00187893035f79964dfac": true, // docs/bootstrap.js
+    "93cfbaa2828409fb647442033271d1676e3e07f1d7fcf549d601209e25e0bdac": true, // docs/bootstrap.js
     "0242016e2887b322ab28b887f03779c63899db232bb036d794a0278db9e54339": true, // docs/content-loader.js
     "dcdf563b6c39c881cd4a619a7fbf9e577f12947839d5082a8acfd3caf93f27fa": true, // docs/hook-callback.js
     "93e6b289da83905870d9ac25be0a0a0bb7e12d484c1a0fe56f0a4296a2140b11": true, // docs/hook-worker.js
