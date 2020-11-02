@@ -372,7 +372,7 @@ acl: {
   },
   Reflect: {
     [S_OBJECT]: 'r--',
-    [S_DEFAULT]: '--x',
+    [S_DEFAULT]: 'rwxRW',
     '@normalization_checker': 'r-x',
     '@bind_normalization_checker': 'r-x',
     '@tslib': 'r-x',
@@ -3397,6 +3397,30 @@ acl: {
     [S_DEFAULT]: 'rwxRW',
   },
   __system_global_test__: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simdFloatTypes: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simdBoolTypes: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simdIntTypes: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simd32bitFloatIntTypes: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simdSmallIntTypes: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simdBoolIntTypes: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simdFloatIntTypes: {
+    [S_DEFAULT]: 'rwxRW',
+  },
+  simdAllTypes: {
     [S_DEFAULT]: 'rwxRW',
   },
   $: {

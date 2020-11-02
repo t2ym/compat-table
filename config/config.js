@@ -1037,6 +1037,14 @@ class TargetConfig extends Injectable(Traceable(Configurable(GulpDefaultRegistry
       type: 'iframe',
       dest: path.resolve(this.path.base, this.path.root, 'esnext', 'index.html'),
     })
+    .assign('esintl')({ // defining an injection target, not a plugin
+      type: 'iframe',
+      dest: path.resolve(this.path.base, this.path.root, 'esintl', 'index.html'),
+    })
+    .assign('non-standard')({ // defining an injection target, not a plugin
+      type: 'iframe',
+      dest: path.resolve(this.path.base, this.path.root, 'non-standard', 'index.html'),
+    })
     .assign('entry-page')({
       type: 'entryPage',
       dest: path.resolve(this.path.base, this.path.root, 'original-index.html'),
@@ -1073,6 +1081,8 @@ class TargetConfig extends Injectable(Traceable(Configurable(GulpDefaultRegistry
           'es6',
           'es2016plus',
           'esnext',
+          'esintl',
+          'non-standard',
           //'sub-document',
           //'sub-sub-document',
           'bootstrap-js',
