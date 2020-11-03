@@ -1286,6 +1286,33 @@ else {
       }
       chainAcl(acl);
     }
+    static unchainAcl(acl) {
+      const unchainAcl = function unchainAcl(_acl, path = [ [_acl, 'acl'] ]) {
+        let properties = Object.getOwnPropertySymbols(_acl).concat(Object.getOwnPropertyNames(_acl));
+        if (!_acl[S_CHAIN]) {
+          Reflect.setPrototypeOf(_acl, null);
+        }
+        for (let property of properties) {
+          if (property === S_CHAIN) {
+          }
+          else {
+            let __acl = _acl[property];
+            switch (typeof __acl) {
+            case 'object':
+              if (__acl) {
+                path.push([__acl, property]);
+                unchainAcl(__acl, path);
+                path.pop();
+              }
+              break;
+            default:
+              break;
+            }
+          }
+        }
+      }
+      unchainAcl(acl);
+    }
     static mergeAcl(target, ...sources) {
       const originalTarget = target;
       const mergeAcl = function mergeAcl(target, source) {
@@ -1821,7 +1848,7 @@ else {
                 case 'undefined':
                   _acl = Reflect.has(_acl, property)
                     ? isGlobal
-                      ? _acl[property] instanceof Object && Reflect.has(_acl[property], S_OBJECT)
+                      ? _acl[property] && typeof _acl[property] === 'object' && Reflect.has(_acl[property], S_OBJECT)
                         ? _acl[property][S_OBJECT]
                         : _acl[property]
                       : _acl[property]
@@ -1829,7 +1856,7 @@ else {
                       ? context === S_DEFAULT
                         ? isGlobal
                           ? Reflect.has(acl, property)
-                            ? acl[property] instanceof Object && Reflect.has(acl[property], S_OBJECT)
+                            ? acl[property] && typeof acl[property] === 'object' && Reflect.has(acl[property], S_OBJECT)
                               ? acl[property][S_OBJECT]
                               : acl[property]
                             : acl[S_GLOBAL]
@@ -1837,7 +1864,7 @@ else {
                         : _acl[context]
                       : isGlobal
                         ? Reflect.has(acl, property)
-                          ? acl[property] instanceof Object && Reflect.has(acl[property], S_OBJECT)
+                          ? acl[property] && typeof acl[property] === 'object' && Reflect.has(acl[property], S_OBJECT)
                             ? acl[property][S_OBJECT]
                             : acl[property]
                           : acl[S_GLOBAL]
@@ -1864,7 +1891,7 @@ else {
                     for (_property of property) {
                       __acl = Reflect.has(_acl, property)
                         ? isGlobal
-                          ? _acl[property] instanceof Object && Reflect.has(_acl[property], S_OBJECT)
+                          ? _acl[property] && typeof _acl[property] === 'object' && Reflect.has(_acl[property], S_OBJECT)
                             ? _acl[property][S_OBJECT]
                             : _acl[property]
                           : _acl[property]
@@ -1872,7 +1899,7 @@ else {
                           ? context === S_DEFAULT
                             ? isGlobal
                               ? Reflect.has(acl, property)
-                                ? acl[property] instanceof Object && Reflect.has(acl[property], S_OBJECT)
+                                ? acl[property] && typeof acl[property] === 'object' && Reflect.has(acl[property], S_OBJECT)
                                   ? acl[property][S_OBJECT]
                                   : acl[property]
                                 : acl[S_GLOBAL]
@@ -1880,7 +1907,7 @@ else {
                             : _acl[context]
                           : isGlobal
                             ? Reflect.has(acl, property)
-                              ? acl[property] instanceof Object && Reflect.has(acl[property], S_OBJECT)
+                              ? acl[property] && typeof acl[property] === 'object' && Reflect.has(acl[property], S_OBJECT)
                                 ? acl[property][S_OBJECT]
                                 : acl[property]
                               : acl[S_GLOBAL]
@@ -6736,6 +6763,7 @@ else {
       'hookBenchmark',
     ]);
     Policy.chainAcl(acl);
+    Policy.unchainAcl(acl);
     Policy.proxyAcl(acl);
     Policy.resolveBareSpecifierAcl(acl);
     Policy.generatePrefixedModuleNames(acl);
@@ -7192,7 +7220,7 @@ else {
             }
           }
         }
-        if (!name && normalizedThisArg instanceof Object) {
+        if (!name && normalizedThisArg instanceof Object || normalizedThisArg === Object.prototype) {
           [name, isStatic, isObject] = detectName(normalizedThisArg, boundParameters);
         }
         let rawProperty = _args[0];
@@ -8974,7 +9002,7 @@ else {
             }
           }
         }
-        if (!name && normalizedThisArg instanceof Object) {
+        if (!name && normalizedThisArg instanceof Object || normalizedThisArg === Object.prototype) {
           [name, isStatic, isObject] = detectName(normalizedThisArg, boundParameters);
         }
         let rawProperty = _args[0];
