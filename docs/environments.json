@@ -1349,7 +1349,7 @@
     "short": "FF 70",
     "release": "2019-10-22",
     "retire": "2019-12-03",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox71": {
     "full": "Firefox 71",
@@ -1436,7 +1436,7 @@
     "short": "FF 81",
     "release": "2020-09-22",
     "retire": "2020-10-20",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox82": {
     "full": "Firefox 82",
@@ -1447,18 +1447,27 @@
     "obsolete": false
   },
   "firefox83": {
-    "full": "Firefox 83 Beta",
+    "full": "Firefox 83",
     "family": "SpiderMonkey",
-    "short": "FF 83 Beta",
+    "short": "FF 83",
     "release": "2020-11-17",
     "retire": "2020-12-15",
-    "unstable": true
+    "obsolete": false
   },
   "firefox84": {
-    "full": "Firefox 84 Nightly",
+    "full": "Firefox 84 Beta",
     "family": "SpiderMonkey",
-    "short": "FF 84 Nightly",
+    "short": "FF 84 Beta",
     "release": "2020-12-15",
+    "retire": "2021-01-26",
+    "unstable": true
+  },
+  "firefox85": {
+    "full": "Firefox 85 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 85 Nightly",
+    "release": "2021-01-26",
+    "retire": "2022-01-23",
     "unstable": true
   },
   "opera7": {
@@ -2279,7 +2288,7 @@
     "short": "CH 77",
     "release": "2019-09-10",
     "retire": "2019-10-22",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome78": {
     "full": "Chrome 78",
@@ -2287,7 +2296,7 @@
     "short": "CH 78",
     "release": "2019-10-22",
     "retire": "2019-12-10",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome79": {
     "full": "Chrome 79",
@@ -2326,24 +2335,46 @@
     "family": "V8",
     "short": "CH 84",
     "release": "2020-07-14",
-    "obsolete": false
+    "retire": "2020-08-25",
+    "obsolete": true
   },
   "chrome85": {
     "full": "Chrome 85",
     "family": "V8",
     "short": "CH 85",
-    "obsolete": false
+    "release": "2020-08-25",
+    "retire": "2020-10-06",
+    "obsolete": true
   },
   "chrome86": {
-    "full": "Chrome 86 Beta",
+    "full": "Chrome 86",
     "family": "V8",
     "short": "CH 86",
-    "unstable": true
+    "release": "2020-10-06",
+    "retire": "2020-11-17",
+    "obsolete": false
   },
   "chrome87": {
-    "full": "Chrome 87 Canary",
+    "full": "Chrome 87",
     "family": "V8",
     "short": "CH 87",
+    "release": "2020-11-17",
+    "retire": "2021-01-19",
+    "obsolete": false
+  },
+  "chrome88": {
+    "full": "Chrome 88 Beta",
+    "family": "V8",
+    "short": "CH 88",
+    "release": "2021-01-19",
+    "retire": "2021-03-02",
+    "unstable": true
+  },
+  "chrome89": {
+    "full": "Chrome 89 Canary",
+    "family": "V8",
+    "short": "CH 89",
+    "release": "2021-03-02",
     "unstable": true
   },
   "edge12": {
@@ -2624,10 +2655,10 @@
     "obsolete": false
   },
   "safaritp": {
-    "full": "Safari Technology Preview Release 106",
+    "full": "Safari Technology Preview Release 116",
     "family": "JavaScriptCore",
     "short": "SF TP",
-    "release": "2020-05-28",
+    "release": "2020-11-19",
     "unstable": true
   },
   "webkit": {
@@ -3991,6 +4022,26 @@
     "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
     "release": "2020-05-19",
     "equals": "graalvm20",
+    "obsolete": true,
+    "unstable": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "graalvm20_3": {
+    "full": "GraalVM JavaScript 20.3.0",
+    "family": "GraalVM",
+    "short": "GraalVM 20.3.0",
+    "platformtype": "engine",
+    "note_id": "graalvm-node-mode",
+    "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
+    "release": "2020-11-17",
+    "equals": "graalvm20_1",
     "obsolete": false,
     "unstable": false,
     "test_suites": [
